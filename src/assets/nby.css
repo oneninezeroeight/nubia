@@ -3,9 +3,9 @@ body {
   overflow-x: hidden;
 }
 
-.header-index {
+/* .header-index {
   display: none;
-}
+} */
 
 .row .imgurl>img {
   background: rgb(244, 243, 239);
@@ -545,3 +545,19 @@ body {
   position: relative;
   right: 0.7rem;
 }
+/*           */
+.header-index { position: relative; top: 0; left: 0; border-bottom: 1px solid #ccc; background: #fff; width: 100%;z-index:99; }
+.header-index .tit { text-align: center; height: 5em }
+.header-index .tit h2 { padding: 1.2em 0 0 }
+.header-index .tit span { font-size: 2em; color: #464646; font-weight: 300 }
+.header-index .left { position: absolute; top: 0; left: 0 }
+.header-index .left .home {display: inline-block;padding: .8em 1.5em;}
+.header-index .left .home span { padding: .2em 0; display: inline-block; font-size: 2em; color: #464646; color: #fff; width: 7em }
+.header-index .left .home .icon-home { padding: 0; font-size: 2.8em }
+.header-index .right { position: absolute; top: 0; right: 0; padding: 0 1em 0 0 }
+.header-index .right li { float: left }
+.header-index .right li a { display: block; padding: 1em .5em 1em .7em; position: relative }
+.header-index .right li .ico { display: inline-block; width: 3em; height: 3em }
+.header-index .right .user .icon-gerenzhongxin { font-size: 2.6em; color: #464646 }
+.header-index .right .cart .icon-gouwuche { font-size: 2.6em; color: #464646 }
+.header-index .right .cart .tip { position: absolute; top: .8em; right: 0; width: 1.5em; height: 1.4em; padding-top: .1em; text-align: center; background-color: #ffc703; color: #783600; -webkit-border-radius: .3em; -moz-border-radius: .3em; -ms-border-radius: .3em; -o-border-radius: .3em; border-radius: .3em }

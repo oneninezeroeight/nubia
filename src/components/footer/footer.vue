@@ -25,7 +25,7 @@ export default {
       tabbar: [
         {
           title: "首页",
-          url: "home",
+          url: "/",
           dot: false
         },
         {
