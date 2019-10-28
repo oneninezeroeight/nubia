@@ -1,0 +1,111 @@
+body, h1, h2, h3, p, dl, dd, ol, ul, th, td, form, fieldset, input, button, textarea {
+    margin: 0;
+    padding: 0;
+}
+a, input, textarea {
+    text-decoration: none;
+    outline: 0;
+}
+.header {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 99;
+    height: 3.125rem;
+    width: 100%;
+}
+.header .left {
+    margin-left: 0.7em;
+    float: left;
+    height: 3.125rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header .left .home {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.header .left .home span.icon-huitui {
+    padding-top: .3em;
+    padding-right: .3em;
+}
+.header .left .home span {
+    /* padding: 0 .2rem; */
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #464646;
+}
+.header .left .home span:nth-of-type(1){
+    padding-top: .2rem;
+}
+.nav {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+.nav div {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.nav div a {
+    width: 18%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: rgb(100,100,100);
+    font-size: 0.9rem;
+}
+.activeNav a {
+    color: rgb(255,90,90)!important;
+}
+.news-section img {
+    max-width: 100%;
+    max-height: inherit;
+}
+.news-wrap {
+    padding: 0.5rem 1.15rem;
+    box-sizing: border-box;
+}
+.news-wrap h3 {
+    padding: 0.3rem 0!important;
+    font-size: 16px;
+    padding: 1.25rem 0;
+    text-align: left!important;
+}
+.news-wrap .news-wrap-info {
+    color: #777;
+    font-size: 14px;
+    line-height: 26px;
+}
+.news-wrap .news-wrap-tips {
+    color: #999;
+    margin: 1rem 0 0.5rem;
+    text-align: right;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.news-wrap .news-wrap-tips span {
+    padding-right: 8px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+}
+.icon-focal_length {
+    margin-right: 0.4rem;
+}
