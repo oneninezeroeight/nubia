@@ -2,6 +2,7 @@
   <div>
     <Header :toggle="1"></Header>
     <Swiper></Swiper>
+    <Panel></Panel>
     <div class="service">
       <h2>联系客服</h2>
       <a class="serviceCard">
@@ -47,14 +48,15 @@
 <script>
 import Header from "../../header/header.vue";
 // import Search from "";
-// import Panel from "";
+import Panel from "../../panel/panel.vue";
 import Footer from "../../footer/footer.vue";
 import Swiper from "../../views/swiper/swiper.vue";
 export default {
   components: {
     Header,
     Footer,
-    Swiper
+    Swiper,
+    Panel
   }
 };
 </script>
