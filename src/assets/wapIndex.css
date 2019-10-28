@@ -1,0 +1,420 @@
+body, h1, h2, h3, p, dl, dd, ol, ul, th, td, form, fieldset, input, button, textarea {
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+a, input, textarea {
+  text-decoration: none;
+  outline: 0;
+}
+img {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+}
+.header-index .right {
+  background: none;
+  padding: 0 1em 0 0;
+  height: auto;
+  line-height: 3em;
+  width: auto;
+}
+
+.btn-tabs a:first-child {
+  color: #666;
+}
+
+body {
+  background: #F8F8F8;
+}
+
+.over_hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user_center {
+  padding-bottom: 55px;
+  overflow: hidden;
+}
+
+.user_center>div {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.user_center,
+.user_center * {
+  box-sizing: border-box;
+}
+
+.news_num {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #FF0000;
+  color: #FF0000;
+  line-height: 15px;
+  text-align: center;
+  background: #fff;
+  right: -8px;
+  top: -3px;
+  border-radius: 50%;
+  font-size: 11px;
+}
+
+.user_header {
+  background: url(//oss.static.nubia.cn/upload/5af40b7c5203997.png) no-repeat center center;
+  height: 124px;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.user_header .user_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  left: 22px;
+  bottom: 25px;
+  background: url(//oss.static.nubia.cn/upload/59c0c0948d26a56.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.user_header .user_name {
+  position: absolute;
+  left: 90px;
+  bottom: 22px;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.user_header .user_name .name {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 26px;
+}
+
+.user_header .user_name .class {
+  width: 100px;
+  height: 20px;
+  border-radius: 12px;
+  font-size: 12px;
+  padding-left: 20px;
+  text-align: center;
+  line-height: 18px;
+  padding-right: 10px;
+}
+
+.user_header .user_set {
+  position: absolute;
+  width: 50px;
+  right: 0;
+  bottom: 55px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.user_header .register {
+  position: absolute;
+  left: 84px;
+  bottom: 25px;
+  height: 52px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 52px;
+}
+
+.user_header .user_set .user_news {
+  position: relative;
+  width: 32px;
+  height: 30px;
+  background: url(//oss.static.nubia.cn/upload/5ba9e43bb3c2316.png) no-repeat center center;
+  background-size: 100%;
+  display: inline-block;
+}
+
+.user_header .user_set .user_setting {
+  margin-left: 5px;
+  width: 32px;
+  height: 30px;
+  background: url(//oss.static.nubia.cn/upload/5ba9e43b9330324.png) no-repeat center center;
+  background-size: 100%;
+  display: inline-block;
+}
+
+.user_set .news_num {
+  border: 2px solid #fff;
+  color: #fff;
+  background: #FF0000;
+}
+
+.common {
+  background-color: #000;
+}
+
+.common .user_img {
+  border: 2px solid #ccc;
+}
+
+.common .class {
+  border: 1px solid #ccc;
+  color: #ccc;
+  background: url(//oss.static.nubia.cn/upload/5af40b7c415d290.png)no-repeat 5px center;
+  background-size: 18px;
+}
+
+.bronze {
+  background-color: #00716F;
+}
+
+.bronze .user_img {
+  border: 2px solid #68aaa9;
+}
+
+.bronze .class {
+  border: 1px solid #5ec6b6;
+  color: #8bf3db;
+  background: url(//oss.static.nubia.cn/upload/5af40b7c51e9a89.png)no-repeat 5px center;
+  background-size: 18px;
+}
+
+.silver {
+  background-color: #233670;
+}
+
+.silver .user_img {
+  border: 2px solid #7c87a9;
+}
+
+.silver .class {
+  border: 1px solid #7b88ad;
+  color: #a6afcc;
+  background: url(//oss.static.nubia.cn/upload/5af40b7c26c3174.png)no-repeat 5px center;
+  background-size: 18px;
+}
+
+.gold {
+  background-color: #AB7200;
+}
+
+.gold .user_img {
+  border: 2px solid #ccab68;
+}
+
+.gold .class {
+  border: 1px solid #dfbf4e;
+  color: #fce96b;
+  background: url(//oss.static.nubia.cn/upload/5af40b7c421b745.png)no-repeat 5px center;
+  background-size: 18px;
+}
+
+.diamond {
+  background-color: #5E1278;
+}
+
+.diamond .user_img {
+  border: 2px solid #9f72ae;
+}
+
+.diamond .class {
+  border: 1px solid #d599f8;
+  color: #d599f8;
+  background: url(//oss.static.nubia.cn/upload/5af40b7c51f6a72.png)no-repeat 5px center;
+  background-size: 18px;
+}
+
+
+
+.ticket {
+  background: #fff;
+  height: 74px;
+  padding: 14px 0 4px 0;
+}
+
+.ticket>ul {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket>ul>li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  height: 100%;
+}
+
+.ticket>ul>li>a>b {
+  font-size: 18px;
+}
+
+.ticket>ul>li>a>p {
+  color: #7f7f7f;
+  font-weight: 200;
+  font-size: 12px
+}
+
+.ticket>ul>li>a>b,
+.ticket>ul>li>p {
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+
+.order {
+  background: #fff;
+  padding: 18px 0 13px;
+  margin-top: 10px !important;
+}
+
+.order .my_order {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 22px;
+}
+
+.order .my_order>div:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  float: left;
+}
+
+div.my_order_all {
+  font-size: 14px;
+  float: right;
+  padding-right: 20px;
+  background: url(//oss.static.nubia.cn/upload/5af40b7941e0f27.png) no-repeat center right;
+  background-size: 12px;
+}
+
+div.my_order_all>a {
+  color: #7f7f7f;
+  font-weight: 300;
+}
+
+.order>ul {
+  width: 100%;
+  height: 64px;
+  margin-top: 30px;
+}
+
+.order>ul>li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  height: 100%;
+}
+
+.order>ul>li>a>div.order_icon {
+  width: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.order>ul>li>a>div.order_icon>img {
+  width: 100%;
+}
+
+.order>ul>li>a>p {
+  color: #7f7f7f;
+  font-size: 12px;
+}
+
+.tool,
+.serve {
+  background: #fff;
+  padding: 18px 0;
+  margin-top: 10px !important;
+}
+
+.tool_header,
+.serve_header {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+}
+
+.tool>ul,
+.serve>ul {
+  width: 100%;
+  height: 148px;
+  margin-top: 30px;
+}
+
+.tool>ul>li,
+.serve>ul>li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.tool>ul>li>a,
+.serve>ul>li>a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.tool>ul>li>a>img,
+.serve>ul>li>a>img {
+  width: 40px;
+  margin-bottom: 7px;
+}
+
+.tool>ul>li>a>p,
+.serve>ul>li>a>span {
+  color: #7f7f7f;
+  font-size: 12px;
+}
+
+.news_num {
+  display: none;
+}
+
+.message {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+
+.message img {
+  width: 100%;
+}
+
+.message i {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  background: rgb(255, 94, 94);
+  color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  border-radius: 50%;
+}
