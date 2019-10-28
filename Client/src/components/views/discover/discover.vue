@@ -8,18 +8,19 @@
         </a>
       </div>
     </div>
+
     <div class="nav">
       <div class="activeNav">
-        <a href="/viewnews.php">产品热评</a>
+        <a>产品热评</a>
       </div>
       <div>
-        <a href="/active/96dbde6b862724c.html">体验店</a>
+        <a>体验店</a>
       </div>
       <div>
-        <a href="/news.php">新闻中心</a>
+        <a>新闻中心</a>
       </div>
       <div>
-        <a href="/video.php">视频长廊</a>
+        <a>视频长廊</a>
       </div>
     </div>
     <div class="news-section" v-for="(item,index) in news" :key="index">

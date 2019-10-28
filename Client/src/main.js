@@ -5,8 +5,6 @@ import App from './App'
 import router from './router'
 import '../src/assets/index.css'
 import '../src/assets/nby.css';
-
-
 import '../src/assets/style.css'
 import '../src/assets/wapIndex.css'
 import '../src/assets/icon/iconfont.css'

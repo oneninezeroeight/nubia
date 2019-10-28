@@ -56,7 +56,7 @@
             <span>{{item.span}}</span></a></li>
       </ul>
     </div>
-    <Footer />
+    <Footer :offset=4></Footer>
   </div>
 
 </template>
