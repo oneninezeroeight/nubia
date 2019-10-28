@@ -1,0 +1,239 @@
+*{
+	list-style: none;
+}
+body{
+	height:100%;overflow:auto;margin: 0;
+}
+.nav_bottom {
+	text-align: center;
+	color: #9C9C9C;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 100000;
+	background: #fff;
+	-moz-box-shadow: 0px -1px 2px #eee;
+	box-shadow: 0px -1px 2px #eee;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+}
+
+.nav_bottom li {
+	float: left;
+	width: 20%;
+	height: 100%;
+	padding: 8px 0;
+	font-size: 12px;
+}
+
+.nav_bottom a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.nav_bottom li div {
+	display: block;
+	width: 20px;
+	margin: 0 auto;
+	margin-bottom: 3px;
+	height: 20px;
+}
+
+.nav_bottom li:nth-child(1) div {
+	background: url(../public/image/home.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(2) div {
+	background: url(../public/image/cate.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(3) div {
+	background: url(../public/image/discover.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(4) div {
+	background: url(../public/image/shop.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(5) div {
+	background: url(../public/image/my.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li a {
+	color: #9C9C9C;
+}
+
+.nav_bottom li.active a {
+	color: #000;
+}
+
+.nav_bottom li:nth-child(1).active div {
+	background: url(../public/image/home-active.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(2).active div {
+	background: url(../public/image/cate-active.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(3).active div {
+	background: url(../public/image/discover-active.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(4).active div {
+	background: url(../public/image/shop-active.png) no-repeat center;
+	background-size: 20px;
+}
+
+.nav_bottom li:nth-child(5).active div {
+	background: url(../public/image/my-active.png) no-repeat center;
+	background-size: 20px;
+}
+.nav_bottom li:nth-child(1).active a {
+	color: rgb(255,96,96);
+}
+
+.nav_bottom li:nth-child(2).active a {
+	color: rgb(255,96,96);
+}
+
+.nav_bottom li:nth-child(3).active a {
+	color: rgb(255,96,96);
+}
+
+.nav_bottom li:nth-child(4).active a {
+	color: rgb(255,96,96);
+}
+
+.nav_bottom li:nth-child(5).active a {
+	color: rgb(255,96,96);
+}
+/*                          */
+.search{padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(240,240,240);
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+    background: white;
+	height:3.5rem;
+	z-index: 100;
+	}
+	
+.search .searchBack{
+	/* width: 0px; */
+	margin-right:0.2rem;
+}
+.search>.searchBox{
+    width: 78%;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 40px;
+    background: rgb(248,248,248) url(https://oss.static.nubia.cn/active/5c73876ac212759.png)no-repeat 12px center;
+    background-size: 20px;
+    line-height: 35px;
+    color: rgb(115,115,115);
+	
+
+}
+.inputWrap{
+	width: 78%;
+	height: 35px;
+	position: relative;
+}
+.inputWrap>input{
+    outline: none;
+    border: 0;
+	width: 100%;
+	height: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    padding-left: 40px;
+	padding-right: 2rem;
+    background: rgb(248,248,248) url(https://oss.static.nubia.cn/active/5c73876ac212759.png)no-repeat 12px center;
+    background-size: 20px;
+    line-height: 35px;
+    color: rgb(115,115,115);
+}
+.inputWrap img{
+	width:1.1rem;
+	height:1.1rem;
+	position: absolute;
+	right:0.5rem;
+	top:calc((100% - 1.1rem)/2)
+}
+.searchResult{
+	position: absolute;
+	top:4rem;
+	left:0px;
+	width:100%;
+	background: #fff;
+	display: inline-block;
+	
+}
+.searchResult li{
+	    width: 100%;
+        padding: 0.8rem 0.5rem 0.8rem 1.4rem;
+    border-bottom: 1px solid rgb(240,240,240);
+    font-size: 0.95rem;
+}
+
+
+.search>.searchMessage{
+    width: 12%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7rem;
+	position: relative;}
+.search>a>img{width:1.5rem;}
+.search .messageTip{
+				position: absolute;
+    top: 2px;
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    background: rgb(255,94,94);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    border-radius: 50%;
+}
+.searchBtn{
+	font-size:0.95rem;
+	display: inline-block;
+	margin-left:0.7rem;
+	white-space: nowrap;
+	
+}
+
+
+.searchLogoWhite{
+    background: url(//shop-soa-static.nubia.com/images/logo_white.png) 0 center no-repeat;
+    background-size: cover;
+}
+.searchLogoBlack{
+    background: url(//shop-soa-static.nubia.com/images/logo_black.png) 0 center no-repeat;
+    background-size: cover;
+}
+.searchLogo{
+	margin-right:0.5rem;
+	width: 40%;
+	height: 1rem;
+}
