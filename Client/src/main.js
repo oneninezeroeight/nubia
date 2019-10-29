@@ -8,6 +8,7 @@ import '../src/assets/nby.css';
 import '../src/assets/style.css'
 import '../src/assets/wapIndex.css'
 import '../src/assets/icon/iconfont.css'
+import '../src/assets/cate.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)

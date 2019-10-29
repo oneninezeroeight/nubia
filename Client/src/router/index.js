@@ -8,8 +8,9 @@ import Discover from '../components/views/discover/discover.vue';
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [{
       path: '/',
       name: 'home',
       component: Home

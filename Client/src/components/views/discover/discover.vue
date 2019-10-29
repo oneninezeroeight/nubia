@@ -71,9 +71,7 @@
         })
       }
     },
-    computed: {
-      height:window.height()  
-    },
+  
     mounted() {
       this.getNews()
     },
