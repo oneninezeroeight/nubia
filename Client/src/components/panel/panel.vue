@@ -2,7 +2,7 @@
   <div>
     <div id="show_big" class="card show_big">
       <div class="col2">
-        <div class="row2 mg-bor-right">
+        <div class="row2">
           <a href>
             <span>
               <img :src="col.src" />
@@ -17,7 +17,7 @@
               </span>
             </a>
           </div>
-          <div class="row2">
+          <div class="row1">
             <a href>
               <span>
                 <img :src="row2.src" />
@@ -55,14 +55,15 @@
               </p>
             </a>
           </div>
-        </div>
+        </div> 
       </div>
       <div class="coll more">
         <a href>
-          <span>查看更多手机</span>
+          <span>查看更多手机></span>
         </a>
       </div>
     </div>
+
   </div>
 </template>
 

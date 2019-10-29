@@ -2,13 +2,13 @@
   <div>
     <div class="header">
       <div class="left">
-        <a title="nubia商城" id="goback" class="home">
+        <a title="nubia商城" id="goback" class="home" href="http://localhost:8080/#/">
           <span class="iconfont icon-fanhui"></span>
           <span>发现</span>
         </a>
       </div>
     </div>
-
+<!--  -->
     <div class="nav">
       <div class="activeNav">
         <a>产品热评</a>
@@ -23,6 +23,7 @@
         <a>视频长廊</a>
       </div>
     </div>
+<!--  -->
     <div class="news-section" v-for="(item,index) in news" :key="index">
       <a>
         <img :src="item.src" :alt="item.h3">
@@ -42,7 +43,7 @@
     <div id="loading" class="dropload" @click="more">
        查看更多
     </div>
-    <Footer :offset=2></Footer>
+    <!-- <Footer :offset=2></Footer> -->
   </div>
 </template>
 <script>
@@ -85,7 +86,6 @@
 
     components: {
       Header,
-      Footer
     }
   }
 
