@@ -39,8 +39,8 @@
         </p>
       </div>
     </div>
-    <div id="loading" class="dropload">
-        <img src="https://static.nubia.cn/mobile/images/loading.gif" alt="" style="max-width:100%">下拉加载...
+    <div id="loading" class="dropload" @click="more">
+       查看更多
     </div>
     <Footer :offset=2></Footer>
   </div>
@@ -54,6 +54,7 @@
     data() {
       return {
         news: [],
+        any:[],
         num:5,
       }
     },
@@ -64,17 +65,24 @@
           let {
             newsData
           } = response.data;
-          let newsDatas = newsData.sort((a, b) => {
+          _vue.any = newsData.sort((a, b) => {
             return a._id * 1 - b._id * 1
           })
-          _vue.news = newsDatas.slice(0,this.num)
+          _vue.news = _vue.any.slice(0,this.num)
         })
+      },
+      more(){
+        let _vue = this
+        _vue.num+=5;
+        _vue.num<=_vue.any.length?_vue.num:_vue.num=_vue.any.length
+        _vue.news=_vue.any.slice(0,_vue.num)
       }
     },
   
     mounted() {
       this.getNews()
     },
+
     components: {
       Header,
       Footer
