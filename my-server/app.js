@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var findDataRouter = require('./routes/findindex')
 var findNewsRouter = require('./routes/findnews')
+var findCeteRouter = require('./routes/findcete')
 var app = express();
 
 // view engine setup
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/findindex', findDataRouter)
 app.use('/findnews', findNewsRouter)
+app.use('/findCeteRouter', findCeteRouter)
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
