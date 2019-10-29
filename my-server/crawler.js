@@ -2,34 +2,35 @@ var request = require('request');
 const {
     insert
 } = require('./CURD/curd')
-request('https://m.nubia.com/viewnews.php?isAjax=1&page=1', function (error, response, body) {
+request('https://m.nubia.com/show/page/block?pageType=5', function (error, response, body) {
     const news = JSON.parse(body);
     const datas = news.data;
-    console.log(datas[0]);
 
-    // for (var i in datas) {
-    //     arrays = datas[i];
-    //     cate_id = arrays.cate_id;
-    //     cate_name = arrays.cate_name;
-    //     infosdata = arrays.infos;
-    //     infos = [];
-    //     for (var j in infosdata) {
-    //         array = infosdata[j]
-    //         info = {}
-    //         info.title = array.color_name + " " + array.product_name
-    //         info.image_id = `https://oss.static.nubia.cn/${array.image_id}`
-    //         info.id = array.spec_id
-    //         // title = array.title
-    //         // id = array.id
-    //         // small_image = array.small_image
-    //         infos.push(info)
-    //     }
-    //     insert('cateInfos', [{
-    //         cate_id: cate_id,
-    //         cate_name: cate_name,
-    //         infos: infos
-    //     }])
-    // }
+    for (var i in datas) {
+        arrays = datas[i];
+        //     cate_id = arrays.cate_id;
+        //     cate_name = arrays.cate_name;
+        //     infosdata = arrays.infos;
+        indexdatas = [];
+        for (var j in arrays) {
+            array = arrays[j]
+            data = {}
+            data.sub_title = array.sub_title
+            data.title = array.title
+            typeof (array.block_products) == 'object' ? data.price = array.block_products.price: data.price = ""
+            typeof (array.block_products) == 'object' ? data.original_price = array.block_products.original_price: data.original_price = ""
+            data.src = `https://oss.static.nubia.cn/${array.small_image}`
+            // data.id = array.id
+            //         // title = array.title
+            //         // id = array.id
+            //         // small_image = array.small_image
+            indexdatas.push(data)
+        }
+        insert('index', [{
+            _id: i,
+            datas: indexdatas,
+        }])
+    }
     // var a = $("img")
     // var arr = []
     // for (var i = 0; i < a.length; i++) {
