@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :toggle="1"></Header>
+    <Header :toggle="1" ></Header>
     <Swiper></Swiper>
     <Panel></Panel>
     <div class="service">
@@ -52,6 +52,8 @@ import Panel from "../../panel/panel.vue";
 import Footer from "../../footer/footer.vue";
 import Swiper from "../../views/swiper/swiper.vue";
 export default {
+   
+
   components: {
     Header,
     Footer,
