@@ -109,3 +109,9 @@ a, input, textarea {
 .icon-focal_length {
     margin-right: 0.4rem;
 }
+.dropload {
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 0.875rem;
+    color: #333;
+}
