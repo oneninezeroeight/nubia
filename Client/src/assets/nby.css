@@ -545,18 +545,75 @@ body {
   right: 0.7rem;
 }
 /*           */
-.header-index { position: relative; top: 0; left: 0; border-bottom: 1px solid #ccc; background: #fff; width: 100%;z-index:99; }
-.header-index .tit { text-align: center; height: 5em }
-.header-index .tit h2 { padding: 1.2em 0 0 }
-.header-index .tit span { font-size: 2em; color: #464646; font-weight: 300 }
-.header-index .left { position: absolute; top: 0; left: 0 }
-.header-index .left .home {display: inline-block;padding: .8em 1.5em;}
-.header-index .left .home span { padding: .2em 0; display: inline-block; font-size: 2em; color: #464646; color: #fff; width: 7em }
-.header-index .left .home .icon-home { padding: 0; font-size: 2.8em }
-.header-index .right { position: absolute; top: 0; right: 0; padding: 0 1em 0 0 }
-.header-index .right li { float: left }
-.header-index .right li a { display: block; padding: 1em .5em 1em .7em; position: relative }
-.header-index .right li .ico { display: inline-block; width: 3em; height: 3em }
-.header-index .right .user .icon-gerenzhongxin { font-size: 2.6em; color: #464646 }
-.header-index .right .cart .icon-gouwuche { font-size: 2.6em; color: #464646 }
-.header-index .right .cart .tip { position: absolute; top: .8em; right: 0; width: 1.5em; height: 1.4em; padding-top: .1em; text-align: center; background-color: #ffc703; color: #783600; -webkit-border-radius: .3em; -moz-border-radius: .3em; -ms-border-radius: .3em; -o-border-radius: .3em; border-radius: .3em }
+.shop-index { position: relative; top: 0; left: 0; border-bottom: 1px solid #ccc; background: #fff; width: 100%;z-index:99; }
+.shop-index .tit { text-align: center; height: 3rem }
+.shop-index .tit h2 { padding: 1.2em 0 0 }
+.shop-index .tit span { font-size: 2rem; color: #464646; font-weight: 300 }
+.shop-index .left { position: absolute; top: 0; left: 0 }
+.shop-index .left .home {display: inline-block;padding: .8rem 0.75rem;}
+.shop-index .left .home span { padding: .2em 0; display: inline-block; font-size: 0.5rem; color: #464646; color: #fff; width: 8.5rem }
+.shop-index .left .home .icon-home { padding: 0; font-size: 2.8em }
+.shop-index .right { position: absolute; top: 0; right: -10px; padding: 0 .8rem 0 0 }
+.shop-index .right li { float: left }
+.shop-index .right li a { display: block; padding: 1em .5em 0 0; position: relative }
+.shop-index .right li .ico { display: inline-block; width: 3em; height: 3em }
+.shop-index .right .user .icon-icon7 { font-size: 1.5rem; color: #464646; opacity: 0.8;}
+.shop-index .right .cart .icon-gouwuche { font-size: 1.7rem; color: #464646 }
+.shop-index .right .cart .tip { position: absolute; top: .8em; right: 0; width: 1.5em; height: 1.4em; padding-top: .1em; text-align: center; background-color: #ffc703; color: #783600; -webkit-border-radius: .3em; -moz-border-radius: .3em; -ms-border-radius: .3em; -o-border-radius: .3em; border-radius: .3em }
+.tips_view .tips_msg {
+  text-align: center;
+}
+.viewport {
+  max-width: 400px;
+  min-height: 580px;
+}
+.tips_view.mitu_01 .tips_msg:before {
+  width: 10.05rem;
+  height: 10.8rem;
+  background: url(https://static.nubia.cn/mobile/images/emptycart.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+}
+
+.tips_view .tips_msg:before {
+  content: "\0020";
+  display: block;
+  margin: auto;
+}
+.tips_view .tips_btn {
+  width: 9rem;
+  margin: 1.3em auto 5em;
+  padding-bottom: 3em;
+}
+.button.disable_button {
+  color: #515459;
+  text-shadow: rgba(0,0,0,0.1) 0 1px 0;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#f3f4f6),color-stop(100%,#dfe0e2));
+  background-image: -webkit-linear-gradient(#f3f4f6,#dfe0e2);
+  background-image: -moz-linear-gradient(#f3f4f6,#dfe0e2);
+  background-image: -o-linear-gradient(#f3f4f6,#dfe0e2);
+  background-image: linear-gradient(#f3f4f6,#dfe0e2);
+  -webkit-box-shadow: rgba(0,0,0,0.1) 0 0.02941em 0.11765em 0 inset;
+  -moz-box-shadow: rgba(0,0,0,0.1) 0 .02941em .11765em 0 inset;
+  box-shadow: rgba(0,0,0,0.1) 0 0.02941em 0.11765em 0 inset;
+  border-top-color: #d3d4d5;
+  border-left-color: #dadbdd;
+  border-right-color: #dadbdd;
+  border-bottom-color: #dadbdd;
+  font-size: .9rem;
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.61765em;
+  -webkit-border-radius: .23529em;
+  -moz-border-radius: .23529em;
+  -ms-border-radius: .23529em;
+  -o-border-radius: .23529em;
+  border-radius: .23529em;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
+}
