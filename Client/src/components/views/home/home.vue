@@ -52,13 +52,11 @@ import Panel from "../../panel/panel.vue";
 import Footer from "../../footer/footer.vue";
 import Swiper from "../../views/swiper/swiper.vue";
 export default {
-   
-
   components: {
     Header,
     Footer,
     Swiper,
-    Panel
+    Panel,
   }
 };
 </script>
