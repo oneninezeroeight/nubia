@@ -1,11 +1,24 @@
 .layout{
     width:90%;
     margin:0 auto;
-    padding:0;
+    padding: 10px 16px;
+}
+.main_title {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.registerline {
+    height: 0;
+    overflow: hidden;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
 }
 .pwd-eye{
      background: url(../public/image/pwd-eye.png) left top no-repeat;
-     position: absolute; top: 10px; display: block; right: 14px; width: 20px; height: 20px; overflow: hidden;
+     position: absolute; top: 150px; display: block; right: 40px; width: 20px; height: 20px; overflow: hidden;
      -webkit-background-size: 20px 40px;
      -moz-background-size: 20px 40px;
      -ms-background-size: 20px 40px;
@@ -15,7 +28,48 @@
 .pwd-eye.hide{background-position: 0 -20px;}
 .input_box{padding-bottom: 8px;}
 .error_tipsp{height: 18px; line-height: 18px; display: block !important;}
-.con_inputbox{margin-bottom:0;}
+.con_inputbox{margin-bottom:0; border: 0;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    color: #313131;
+    border: 1px solid #a4a4a4;
+    background: #fff;
+}
 .error_tips{position: static;}
 .input_box em.error_ico, .et_con em{display: none;}
 .error_tips .et_con p{background: none; border: none; margin-bottom: 0; padding-top: 0;}
+.imgcode{
+    position: relative;
+}
+.tips_title {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.tips_title a.agreement {
+    color: #e8380d;
+    text-decoration: underline;
+}
+.tips_title a:first-child, .tips_title a.first {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+.orange_linear {
+    border: 1px solid #fff;
+    background: #e8380d;
+    color: #fff;
+}

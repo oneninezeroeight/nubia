@@ -1,16 +1,16 @@
 <template>
 <div>
-    <div class="layout">
+    <div class="login">
         <div class="container_01 mt20a">
             <a href="">
-                <img src="" alt="" class="img-responsive">
+                <img src="http://static.nubia.cn/mobile/images/m_logo.png" alt="" class="img-responsive">
             </a>
         </div>
         <div class="container_02 mt20">
-            <div class="input_box">
+            <div  class="input_box">
                 <em class="id-icon"></em>
                 <input type="text" name="username" id="username" value="" placeholder="邮箱/手机号码/用户名">
-                <div id="username_tag" class="error_tipsp" style="display:block;">
+                <div id="username_tag" class="login_error_tipsp">
                     <em class="error_ico"></em>
                     <div class="error_tips">
                         <div class="et_con">
@@ -21,11 +21,11 @@
                 </div>
                 <div></div>
             </div>
-            <div class="input_box">
+            <div class="pass input_box">
                 <em class="pwd-icon"></em>
-                <input type="password" name="password" id="userpwd" placeholder="密码">
+                <input type="password" name="password" id="userpwd" placeholder="密码" >
                 <i id="eye" class="pwd-eye hide"></i>
-                <div id="userpwd_tag" class="error_tipsp" style="display:block;">
+                <div id="userpwd_tag" class="login_error_tipsp">
                     <em class="error_ico"></em>
                     <div class="error_tips">
                         <div class="et_con">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <span>
+            <span class="Vcode">
                 <a style="color:#e8380d;" href="">手机验证码登录</a>
             </span>
             <div class="btn-reg">
@@ -56,8 +56,8 @@
             </div>
         </div>
     </div>
-    <div class="btn-bottom">
-        <a href="">立即注册</a>
+    <div class="login-btn-bottom">
+        <a href="http://localhost:8080/#/register">立即注册</a>
         <span style="color:#ddd">|</span>
         <a href="">忘记密码？</a>
     </div>

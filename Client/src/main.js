@@ -13,7 +13,8 @@ import '../src/assets/newindex.css'
 import '../src/assets/panelZ.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-
+import SIdentify from './components/Vcode/Vcode.vue'
+Vue.use(SIdentify)
 Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false

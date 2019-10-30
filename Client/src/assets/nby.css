@@ -617,3 +617,201 @@ body {
   border-style: solid;
   text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
 }
+
+/* 登录 */
+.layout {
+  padding: 10px 16px;
+}
+.login .container_01 {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.login .img-responsive {
+  display: block;
+  width: 100%;
+  line-height: 1;
+  height: auto;
+}
+.login .mt20 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login .input_box {
+  margin: auto;
+  position: relative;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px;
+  width: 70%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  color: #313131;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.login .input_box input{
+  border:0
+}
+.login .id-icon {
+  background: url(https://account.nubia.com/res/images/id.png) no-repeat;
+  width: 35px;
+  height: 25px;
+  -webkit-background-size: 60%;
+  -moz-background-size: 60%;
+  background-size: 60%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.login .error{
+  display: block;
+}
+.login .login_error_tipsp {
+  height: 18px;
+  line-height: 18px;
+  margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.login .error_tips {
+  color: #d04e00;
+  font-size: 12px;
+}
+.login .et_con {
+  position: relative;
+}
+.login .et_con p {
+  padding: 3px 0px;
+  min-height: 16px;
+  line-height: 1.5;
+  border: 1px solid #cfaf25;
+  background: #fef3be;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(top, #fff5c0, #fae4a5);
+  background: -moz-linear-gradient(top, #fff5c0, #fae4a5);
+  background: -ms-linear-gradient(top, #fff5c0, #fae4a5);
+}
+.login .pwd-icon {
+  background: url(https://account.nubia.com/res/images/pwd.png) no-repeat;
+  width: 35px;
+  height: 25px;
+  -webkit-background-size: 60%;
+  -moz-background-size: 60%;
+  background-size: 60%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.login .pass{
+  margin-top:30px
+}
+.login .Vcode{
+position: absolute;
+    margin: 10px 0;
+    margin-bottom: 15px;
+    right: 0;
+    font-size: 10px;
+}
+.login .orange_linear {
+  background: #e8380d;
+  color: #fff;
+}
+.login .btn-reg{
+  margin-left: 50px;
+  margin-top:40px
+}
+.login .return_link, .reg_btn {
+  width: 85%;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  min-height: 40px;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.login .tl_c {
+  text-align: center;
+}
+.login .horizontal {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.login .divider {
+  font-size: .9rem;
+  margin: 1rem 0;
+  line-height: 1;
+  height: 0;
+  letter-spacing: .05em;
+  color: rgba(128, 128, 128, 0.85);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.login .horizontal.divider {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  line-height: 1;
+  text-align: center;
+}
+.login .horizontal.divider:before {
+  border-bottom: 1px solid #BDC1C3;
+  margin-left: calc(-50% - 1em);
+  position: absolute;
+    content: '';
+    z-index: 3;
+    width: 50%;
+    top: 50%;
+    height: 0;
+}
+.login .horizontal.divider:after {
+  position: absolute;
+  content: '';
+  z-index: 3;
+  width: 50%;
+  top: 50%;
+  height: 0;
+  border-bottom: 1px solid #BDC1C3;
+  margin-left: 1em;
+}
+.login-btn-bottom {
+  padding-top: 30%;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.login .pwd-eye{
+  background: url(../public/image/pwd-eye.png) left top no-repeat;
+  position: absolute; top: 13px; display: block; right: 10px; width: 20px; height: 20px; overflow: hidden;
+  -webkit-background-size: 20px 40px;
+  -moz-background-size: 20px 40px;
+  -ms-background-size: 20px 40px;
+  -o-background-size: 20px 40px;
+  background-size: 20px 40px;
+}
+.login .pwd-eye.hide{background-position: 0 -20px;}
