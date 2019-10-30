@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .search-w{
     background: rgb(255, 255, 255);
-    border: none !important;
+    border: none;
     transform: translateZ(0);
 }
 .searchLogoBlack {

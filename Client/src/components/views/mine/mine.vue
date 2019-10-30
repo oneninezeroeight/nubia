@@ -8,11 +8,11 @@
         </div>
       </a>
       <div class="user_name">
-        <div class="name "><a href="/account.php?a=login" style="color: white;">登录/注册</a></div> <a
+        <div class="name "><router-Link style="color: white;" to="login">登录/注册</router-Link></div> <a
           href="/active/9a8b3c2eae31c71.html#policy05">
           <div class="class over_hide">普通会员</div>
         </a>
-      </div> <a href="#" class="register" style="display: none;">登录/注册</a>
+      </div> <a class="register" style="display: none;">登录/注册</a>
       <div class="user_set" style="display: none;"><a href="">
           <div class="user_news"><span class="news_num" style="display: none;"></span></div>
         </a>
@@ -62,6 +62,7 @@
 </template>
 <script>
 import Footer from '../../footer/footer.vue'
+import Login from '../../views/login/login.vue'
   export default {
     data() {
       return {

@@ -4,6 +4,7 @@ import Home from '../components/views/home/home.vue'
 import Mine from '../components/views/mine/mine.vue'
 import Shop from '../components/views/shopcar/shopcar.vue';
 import Cete from '../components/views/cete/cete.vue';
+import Login from '../components/views/login/login.vue'
 import Discover from '../components/views/discover/discover.vue';
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/mine',
       name: 'mine',
       component: Mine
+    },
+    {
+      path:'/login',
+      name:'login',
+      component:Login
     }
 
   ]

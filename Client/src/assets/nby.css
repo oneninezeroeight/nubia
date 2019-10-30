@@ -24,7 +24,7 @@ body {
 
 .search {
   background: rgba(255, 255, 255, 0);
-  border: none !important;
+  border: none ;
   transform: translateZ(0) 
 }
 
