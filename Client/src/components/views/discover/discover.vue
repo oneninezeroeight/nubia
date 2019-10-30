@@ -10,83 +10,65 @@
     </div>
 <!--  -->
     <div class="nav">
-      <div class="activeNav">
-        <a>产品热评</a>
+      <div :class="['',{'activeNav':onset===0}]" >
+        <a :offset=0 @click="change">产品热评</a>
       </div>
-      <div>
-        <a>体验店</a>
+      <div :class="['',{'activeNav':onset===1}]" >
+        <a :offset=1 @click="change">体验店</a>
       </div>
-      <div>
-        <a>新闻中心</a>
+      <div :class="['',{'activeNav':onset===2}]" >
+        <a :offset=2 @click="change">新闻中心</a>
       </div>
-      <div>
-        <a>视频长廊</a>
+      <div :class="['',{'activeNav':onset===3}]" >
+        <a :offset=3 @click="change">视频长廊</a>
       </div>
     </div>
+    <component :is="view"></component>
 <!--  -->
-    <div class="news-section" v-for="(item,index) in news" :key="index">
-      <a>
-        <img :src="item.src" :alt="item.h3">
-      </a>
-      <div class="news-wrap">
-        <a>
-          <h3 style="color:#4f4f4f">{{item.h3}}</h3>
-          <p class="news-wrap-info">
-            {{item.p}}</p>
-        </a>
-        <p class="news-wrap-tips">
-          <span>2019-11-11</span>
-          <span><i class="iconfont icon-ai-eye"></i>9999</span>
-        </p>
-      </div>
-    </div>
-    <div id="loading" class="dropload" @click="more">
-       查看更多
-    </div>
-    <!-- <Footer :offset=2></Footer> -->
   </div>
 </template>
 <script>
-  import axios from 'axios'
-  import Header from "../../header/header.vue";
-  import Footer from "../../footer/footer.vue"
-
-  export default {
-    data() {
-      return {
-        news: [],
-        any:[],
-        num:5,
-      }
-    },
-    methods: {
-      getNews() {
-        let _vue = this
-        axios.get('http://localhost:3000/findnews').then((response) => {
-          let {
-            newsData
-          } = response.data;
-          _vue.any = newsData.sort((a, b) => {
-            return a._id * 1 - b._id * 1
-          })
-          _vue.news = _vue.any.slice(0,this.num)
-        })
-      },
-      more(){
-        let _vue = this
-        _vue.num+=5;
-        _vue.num<=_vue.any.length?_vue.num:_vue.num=_vue.any.length
-        _vue.news=_vue.any.slice(0,_vue.num)
-      }
-    },
-  
-    mounted() {
-      this.getNews()
-    },
-
+ import Viewnews from '../discover/page/viewnews'
+ import Activeshop from '../discover/page/activeshop'
+ import News from '../discover/page/news'
+ import Video from '../discover/page/video'
+ export default {
+   props: {
+     offset:Number
+   },
+   data () {
+     return {
+       onset:0,
+      view:'Viewnews'
+     }
+   },
+   methods: {
+     change(e){
+       this.onset=e.target.attributes["offset"].nodeValue*1;
+       switch (this.onset) {
+         case 0:
+           this.view='Viewnews'
+           break;
+       case 1:
+         this.view='Activeshop'
+           break;
+             case 2:
+         this.view='News'
+           break;
+             case 3:
+         this.view='Video'
+           break;
+         default:
+           break;
+       }
+     }
+   },
     components: {
-      Header,
+      Viewnews,
+      Activeshop,
+      News,
+      Video
     }
-  }
+ }
 
 </script>

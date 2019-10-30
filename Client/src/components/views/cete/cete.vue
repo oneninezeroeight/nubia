@@ -3,7 +3,7 @@
         <Header :toggle=0></Header>
         <div class="nav_left">
             <ul>
-                <li v-for="(item,index) in array" :key="index" :class="['',{'active':onset === index}]"  @click="change">
+                <li v-for="(item,index) in array" :key="index" :offset=index :class="['',{'active':onset === index}]"  @click="change">
                     <a :offset=index>{{item.cate_name}}</a>
                 </li>
             </ul>
@@ -38,7 +38,6 @@ import axios from 'axios'
 export default {
       props: {
     offset: Number,
-    href:string
   },
     data () {
         return {
