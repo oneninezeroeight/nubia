@@ -6,13 +6,33 @@
         <li
           v-for="(item,index) in array"
           :key="index"
+          :offset="index"
           :class="['',{'active':onset === index}]"
           @click="jump(index)"
-          :offset="index"
         >
           <a :offset="index">{{item.cate_name}}</a>
         </li>
       </ul>
+    </div>
+    <div class="page-index">
+      <div class="list_category2" v-for="(item,index) in array" :key="index" :id="item._id">
+        <a href class="title">
+          <i></i>
+          <p class="telephone">{{item.cate_name}}</p>
+          <i></i>
+        </a>
+        <ul>
+          <li v-for="(item,index) in array[index].infos" :key="index">
+            <a href>
+              <img :src="item.image_id" alt />
+              <p>{{item.name}}</p>
+            </a>
+          </li>
+        </ul>
+        <p class="check_more">
+          <a href>查看更多</a>
+        </p>
+      </div>
     </div>
     <div class="page-index">
       <div class="list_category2 d_jump" v-for="(item,index) in array" :key="index" :id="item._id">
@@ -44,7 +64,6 @@ import axios from "axios";
 export default {
   props: {
     offset: Number
-    // href:string
   },
   data() {
     return {
@@ -103,7 +122,7 @@ export default {
     },
     onScroll() {
       let scrolled =
-        document.documentElement.scrollTop || document.body.scrollTop; 
+        document.documentElement.scrollTop || document.body.scrollTop;
     }
     // change(e) {
     //   this.onset = e.target.attributes["offset"].nodeValue * 1;

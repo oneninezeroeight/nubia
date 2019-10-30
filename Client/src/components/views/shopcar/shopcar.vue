@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="header-index">
+    <div class="shop-index">
       <div class="left">
         <a title="nubia商城" class="home">
           <span>
@@ -13,12 +13,12 @@
         <ul>
           <li class="user">
             <a title="个人中心">
-              <span class="icon icon-gerenzhongxin"></span>
+              <span class="iconfont icon-icon7"></span>
             </a>
           </li>
           <li class="cart">
             <a title="购物车">
-              <span class="icon icon-gouwuche"></span>
+              <span class="iconfont icon-gouwuche"></span>
             </a>
           </li>
         </ul>
