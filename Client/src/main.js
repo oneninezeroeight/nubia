@@ -14,6 +14,7 @@ import '../src/assets/panelZ.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import SIdentify from './components/Vcode/Vcode.vue'
+import store from './stores/index'
 Vue.use(SIdentify)
 Vue.use(VueAwesomeSwiper)
 
@@ -23,6 +24,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },

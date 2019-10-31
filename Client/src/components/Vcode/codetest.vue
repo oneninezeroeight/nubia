@@ -10,12 +10,14 @@ export default {
   data() {
     return {
       identifyCodes: "1234567890",
-      identifyCode: ""
+      identifyCode: "",
+     
     };
   },
   mounted() {
     this.identifyCode = "";
     this.makeCode(this.identifyCodes, 4);
+    this.$store.commit('setCode', this.identifyCode)
   },
   methods: {
     randomNum(min, max) {
@@ -31,7 +33,7 @@ export default {
           this.randomNum(0, this.identifyCodes.length)
         ];
       }
-      console.log(this.identifyCode);
+      this.$store.commit('setCode', this.identifyCode)
     }
   },
   components: {

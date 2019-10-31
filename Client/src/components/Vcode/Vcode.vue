@@ -102,7 +102,7 @@
       },
       drawLine (ctx) {
         // 绘制干扰线
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 4; i++) {
           ctx.strokeStyle = this.randomColor(this.lineColorMin, this.lineColorMax)
           ctx.beginPath()
           ctx.moveTo(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight))
