@@ -16,7 +16,8 @@
                </div>
            </div>
            <div class="input_box">
-               <input :type="type" name="newPassword" id="np_id" class="con_inputbox" placeholder="6-16个字符(数字、字母、符号至少包含两种)" v-model="password">
+               <input :type="type" name="newPassword" id="np_id" class="con_inputbox" placeholder="6-16个字符(数字、字母、符号至少包含两种)" v-model="password
+               ">
                <i id="eye" :class="['pwd-eye',{'pwd-eye hide':isfac}]" @click="toggle"></i>
                <div id="pwd_tag" class="error_tipsp">
                    <em class="error_ico"></em>
