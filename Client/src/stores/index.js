@@ -5,6 +5,7 @@ export default new Vuex.Store({
   state: {
     author: 'chao',
     code: '123',
+    title:'登录/注册',
     galleryStatus: {
       imgUrl: '',
       isShow: false

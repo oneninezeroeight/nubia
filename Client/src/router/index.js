@@ -5,7 +5,8 @@ import Mine from '../components/views/mine/mine.vue'
 import Shop from '../components/views/shopcar/shopcar.vue';
 import Cete from '../components/views/cete/cete.vue';
 import Discover from '../components/views/discover/discover.vue';
-import Register from '../components/views/register/register.vue'
+import Register from '../components/views/register/register.vue';
+import Login from '../components/views/login/login.vue'
 Vue.use(Router)
 
 export default new Router({

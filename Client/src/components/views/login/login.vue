@@ -72,6 +72,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -95,10 +96,19 @@ export default {
             this.pass=""
             this.toglogin=""
         }
-        axios.get('axios', {
-          params: {}
+        axios.get('http://localhost:3000/login', {
+          params: {
+            username:this.username,
+            password:this.password
+          }
         }).then((ret) => {
-          console.log(ret.data);
+          console.log(ret.data.str);
+          if(ret.data.str==="登录成功"){
+            this.$store.state.title=this.username
+            this.$router.push('/mine')
+          }else{
+            alert("")
+          }
         })
     },
     toggle1() {

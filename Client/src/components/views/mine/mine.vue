@@ -8,7 +8,7 @@
         </div>
       </a>
       <div class="user_name">
-        <div class="name "><router-Link style="color: white;" to="login">登录/注册</router-Link></div> <a
+        <div class="name "><router-Link style="color: white;" to="login" >{{title}}</router-Link></div> <a
           >
           <div class="class over_hide">普通会员</div>
         </a>
@@ -66,6 +66,7 @@ import Login from '../../views/login/login.vue'
   export default {
     data() {
       return {
+        title:'',
         ticket: [{
             class: 'un_used_coupon',
             p: '优惠券',
@@ -154,6 +155,11 @@ import Login from '../../views/login/login.vue'
     },
     components: {
       Footer
+    },
+    created(){
+      this.title=this.$store.state.title
+      // console.log(this.$store.state.title);
+      
     }
   }
 
