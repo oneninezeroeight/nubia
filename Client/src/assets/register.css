@@ -49,6 +49,27 @@
 .error_tips{position: static;}
 .input_box em.error_ico, .et_con em{display: none;}
 .error_tips .et_con p{background: none; border: none; margin-bottom: 0; padding-top: 0;}
+.et_con p {
+    padding: 6px 10px;
+    min-height: 16px;
+    line-height: 1.5;
+    border: 1px solid #cfaf25;
+    background: #fef3be;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    background: -webkit-linear-gradient(top, #fff5c0, #fae4a5);
+    background: -moz-linear-gradient(top, #fff5c0, #fae4a5);
+    background: -ms-linear-gradient(top, #fff5c0, #fae4a5);
+    background: linear-gradient(top, #fff5c0, #fae4a5);
+}
+.error_tips {
+    color: #d04e00;
+    font-size: 12px;
+}
 .imgcode{
     position: relative;
 }

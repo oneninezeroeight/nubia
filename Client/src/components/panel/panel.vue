@@ -90,8 +90,6 @@ export default {
       let arr=indexData.sort((a,b)=>{
         return a._id*1-b._id*1
       })
-      console.log(arr);
-      
   this.col= arr[1].datas[0];
   this.row1=arr[2].datas[0]
   this.row2=arr[3].datas[0]
