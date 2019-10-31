@@ -16,8 +16,8 @@
                </div>
            </div>
            <div class="input_box">
-               <input type="password" name="newPassword" id="np_id" class="con_inputbox" placeholder="6-16个字符(数字、字母、符号至少包含两种)">
-               <i id="eye" class="pwd-eye hide"></i>
+               <input :type="type" name="newPassword" id="np_id" class="con_inputbox" placeholder="6-16个字符(数字、字母、符号至少包含两种)">
+               <i id="eye" :class="['pwd-eye',{'pwd-eye hide':isfac}]" @click="toggle"></i>
                <div id="pwd_tag" class="error_tipsp">
                    <em class="error_ico"></em>
                    <div class="error_tips">
@@ -49,6 +49,22 @@
 import '../../../assets/register.css'
 import Codetest from '../../Vcode/codetest.vue'
 export default {
+    data () {
+        return {
+            isfac:true,
+            type:"password"
+        }
+    },
+    methods: {
+        toggle(){
+            this.isfac=!this.isfac;
+            if(this.type==="password"){
+                this.type="text"
+            }else{
+                this.type="password"
+            }
+        }
+    },
     components: {
         Codetest
     }

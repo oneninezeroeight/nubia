@@ -18,7 +18,7 @@
 }
 .pwd-eye{
      background: url(../public/image/pwd-eye.png) left top no-repeat;
-     position: absolute; top: 150px; display: block; right: 40px; width: 20px; height: 20px; overflow: hidden;
+     position: absolute; top: 150px; display: block; right: 50px; width: 20px; height: 20px; overflow: hidden;
      -webkit-background-size: 20px 40px;
      -moz-background-size: 20px 40px;
      -ms-background-size: 20px 40px;

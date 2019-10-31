@@ -24,8 +24,8 @@ body {
 
 .search {
   background: rgba(255, 255, 255, 0);
-  border: none ;
-  transform: translateZ(0) 
+  border: none;
+  transform: translateZ(0)
 }
 
 .searchBox {
@@ -544,22 +544,109 @@ body {
   position: relative;
   right: 0.7rem;
 }
+
 /*           */
-.shop-index { position: relative; top: 0; left: 0; border-bottom: 1px solid #ccc; background: #fff; width: 100%;z-index:99; }
-.shop-index .tit { text-align: center; height: 3rem }
-.shop-index .tit h2 { padding: 1.2em 0 0 }
-.shop-index .tit span { font-size: 2rem; color: #464646; font-weight: 300 }
-.shop-index .left { position: absolute; top: 0; left: 0 }
-.shop-index .left .home {display: inline-block;padding: .8rem 0.75rem;}
-.shop-index .left .home span { padding: .2em 0; display: inline-block; font-size: 0.5rem; color: #464646; color: #fff; width: 8.5rem }
-.shop-index .left .home .icon-home { padding: 0; font-size: 2.8em }
-.shop-index .right { position: absolute; top: 0; right: -10px; padding: 0 .8rem 0 0 }
-.shop-index .right li { float: left }
-.shop-index .right li a { display: block; padding: 1em .5em 0 0; position: relative }
-.shop-index .right li .ico { display: inline-block; width: 3em; height: 3em }
-.shop-index .right .user .icon-icon7 { font-size: 1.5rem; color: #464646; opacity: 0.8;}
-.shop-index .right .cart .icon-gouwuche { font-size: 1.7rem; color: #464646 }
-.shop-index .right .cart .tip { position: absolute; top: .8em; right: 0; width: 1.5em; height: 1.4em; padding-top: .1em; text-align: center; background-color: #ffc703; color: #783600; -webkit-border-radius: .3em; -moz-border-radius: .3em; -ms-border-radius: .3em; -o-border-radius: .3em; border-radius: .3em }
+.shop-index {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  width: 100%;
+  z-index: 99;
+}
+
+.shop-index .tit {
+  text-align: center;
+  height: 3rem
+}
+
+.shop-index .tit h2 {
+  padding: 1.2em 0 0
+}
+
+.shop-index .tit span {
+  font-size: 2rem;
+  color: #464646;
+  font-weight: 300
+}
+
+.shop-index .left {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.shop-index .left .home {
+  display: inline-block;
+  padding: .8rem 0.75rem;
+}
+
+.shop-index .left .home span {
+  padding: .2em 0;
+  display: inline-block;
+  font-size: 0.5rem;
+  color: #464646;
+  color: #fff;
+  width: 8.5rem
+}
+
+.shop-index .left .home .icon-home {
+  padding: 0;
+  font-size: 2.8em
+}
+
+.shop-index .right {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding: 0 .8rem 0 0
+}
+
+.shop-index .right li {
+  float: left
+}
+
+.shop-index .right li a {
+  display: block;
+  padding: .7em .6em 0 0;
+  position: relative
+}
+
+.shop-index .right li .ico {
+  display: inline-block;
+  width: 3em;
+  height: 3em
+}
+
+.shop-index .right .user .icon-icon7 {
+  font-size: 1.5rem;
+  color: #464646;
+  opacity: 0.8;
+}
+
+.shop-index .right .cart .icon-gouwuche {
+  font-size: 1.7rem;
+  color: #464646
+}
+
+.shop-index .right .cart .tip {
+  position: absolute;
+  top: .8em;
+  right: 0;
+  width: 1.5em;
+  height: 1.4em;
+  padding-top: .1em;
+  text-align: center;
+  background-color: #ffc703;
+  color: #783600;
+  -webkit-border-radius: .3em;
+  -moz-border-radius: .3em;
+  -ms-border-radius: .3em;
+  -o-border-radius: .3em;
+  border-radius: .3em
+}
+
 .tips_view .tips_msg {
   text-align: center;
 }
@@ -622,22 +709,26 @@ body {
 .layout {
   padding: 10px 16px;
 }
+
 .login .container_01 {
   width: 50%;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 .login .img-responsive {
   display: block;
   width: 100%;
   line-height: 1;
   height: auto;
 }
+
 .login .mt20 {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .login .input_box {
   margin: auto;
   position: relative;
@@ -658,9 +749,11 @@ body {
   border: 1px solid #ddd;
   background: #fff;
 }
-.login .input_box input{
-  border:0
+
+.login .input_box input {
+  border: 0
 }
+
 .login .id-icon {
   background: url(https://account.nubia.com/res/images/id.png) no-repeat;
   width: 35px;
@@ -671,9 +764,11 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-.login .error{
+
+.login .error {
   display: block;
 }
+
 .login .login_error_tipsp {
   height: 18px;
   line-height: 18px;
@@ -682,19 +777,20 @@ body {
   font-size: 12px;
   display: none;
 }
+
 .login .error_tips {
   color: #d04e00;
   font-size: 12px;
 }
+
 .login .et_con {
   position: relative;
 }
+
 .login .et_con p {
-  padding: 3px 0px;
+  padding-right:45px;
   min-height: 16px;
   line-height: 1.5;
-  border: 1px solid #cfaf25;
-  background: #fef3be;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -705,6 +801,7 @@ body {
   background: -moz-linear-gradient(top, #fff5c0, #fae4a5);
   background: -ms-linear-gradient(top, #fff5c0, #fae4a5);
 }
+
 .login .pwd-icon {
   background: url(https://account.nubia.com/res/images/pwd.png) no-repeat;
   width: 35px;
@@ -715,25 +812,31 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
-.login .pass{
-  margin-top:30px
+
+.login .pass {
+  margin-top: 30px
 }
-.login .Vcode{
-position: absolute;
-    margin: 10px 0;
-    margin-bottom: 15px;
-    right: 0;
-    font-size: 10px;
+
+.login .Vcode {
+  position: absolute;
+  margin: 10px 0;
+  margin-bottom: 15px;
+  left: 240px;
+  font-size: 10px;
 }
+
 .login .orange_linear {
   background: #e8380d;
   color: #fff;
 }
-.login .btn-reg{
+
+.login .btn-reg {
   margin-left: 50px;
-  margin-top:40px
+  margin-top: 40px
 }
-.login .return_link, .reg_btn {
+
+.login .return_link,
+.reg_btn {
   width: 85%;
   text-align: center;
   cursor: pointer;
@@ -754,11 +857,13 @@ position: absolute;
 .login .tl_c {
   text-align: center;
 }
+
 .login .horizontal {
   margin: 0 auto;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .login .divider {
   font-size: .9rem;
   margin: 1rem 0;
@@ -772,6 +877,7 @@ position: absolute;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
 .login .horizontal.divider {
   position: relative;
   height: auto;
@@ -779,16 +885,18 @@ position: absolute;
   line-height: 1;
   text-align: center;
 }
+
 .login .horizontal.divider:before {
   border-bottom: 1px solid #BDC1C3;
   margin-left: calc(-50% - 1em);
   position: absolute;
-    content: '';
-    z-index: 3;
-    width: 50%;
-    top: 50%;
-    height: 0;
+  content: '';
+  z-index: 3;
+  width: 50%;
+  top: 50%;
+  height: 0;
 }
+
 .login .horizontal.divider:after {
   position: absolute;
   content: '';
@@ -799,19 +907,30 @@ position: absolute;
   border-bottom: 1px solid #BDC1C3;
   margin-left: 1em;
 }
+
 .login-btn-bottom {
   padding-top: 30%;
   bottom: 0;
   text-align: center;
   width: 100%;
 }
-.login .pwd-eye{
+
+.login .pwd-eye {
   background: url(../public/image/pwd-eye.png) left top no-repeat;
-  position: absolute; top: 13px; display: block; right: 10px; width: 20px; height: 20px; overflow: hidden;
+  position: absolute;
+  top: 10px;
+  display: block;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
   -webkit-background-size: 20px 40px;
   -moz-background-size: 20px 40px;
   -ms-background-size: 20px 40px;
   -o-background-size: 20px 40px;
   background-size: 20px 40px;
 }
-.login .pwd-eye.hide{background-position: 0 -20px;}
+
+.login .pwd-eye.hide {
+  background-position: 0 -20px;
+}

@@ -17,7 +17,7 @@
             </a>
           </li>
           <li class="cart">
-            <a title="购物车">
+            <a title="购物车" style="padding-right:0px;">
               <span class="iconfont icon-gouwuche"></span>
             </a>
           </li>
