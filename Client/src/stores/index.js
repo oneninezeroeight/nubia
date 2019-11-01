@@ -3,9 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
-    author: 'chao',
     code: '123',
-    title:'登录/注册',
+    title: '登录/注册',
     galleryStatus: {
       imgUrl: '',
       isShow: false
@@ -15,11 +14,17 @@ export default new Vuex.Store({
   actions: {
     setCode(context, data) {
       context.commit('setCode', data)
-    }
+    },
+    // setCuteId(context, data) {
+    //   context.commit('setCuteId', data)
+    // }
   },
   mutations: {
     setCode(state, data) {
       state.code = data
-    }
+    },
+    // setCuteId(state, data) {
+    //   state.ceteid = data
+    // }
   }
 })
