@@ -9,6 +9,7 @@
           :offset="index"
           :class="['',{'active':onset === index}]"
           @click="jump(index)"
+          :id="item.cate_id"
         >
           <a :offset="index">{{item.cate_name}}</a>
         </li>
@@ -22,8 +23,8 @@
           <i></i>
         </a>
         <ul>
-          <li v-for="(item,index) in array[index].infos" :key="index">
-            <a href>
+          <li v-for="(item,index) in array[index].infos" :key="index" :id="item.id" @click="seegood">
+            <a>
               <img :src="item.image_id" alt />
               <p>{{item.name}}</p>
             </a>
@@ -104,11 +105,13 @@ export default {
     onScroll() {
       let scrolled =
         document.documentElement.scrollTop || document.body.scrollTop;
+    },
+    seegood(e){
+      let goodid=e.target.parentNode.parentNode.getAttribute('id'); //商品ID
+      let nav_li_a_id=document.querySelector(".active ").getAttribute('id'); //列表ID
+      this.$router.push({name:'details',params:{goodid:goodid,cateid:nav_li_a_id}})
+       
     }
-    // change(e) {
-    //   this.onset = e.target.attributes["offset"].nodeValue * 1;
-    //   // this.offset=index.target.index()
-    // }
   },
   mounted() {
     this.getData();

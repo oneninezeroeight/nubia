@@ -88,7 +88,10 @@ export default {
             password:this.password
             }
         }).then((response)=>{
-            let str=response.data.str        
+            let str=response.data.str
+            if(str="注册成功"){
+                this.$router.push('/login')
+            }     
         })
     }
     },
