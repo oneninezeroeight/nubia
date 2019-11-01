@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :toggle="1" ></Header>
+    <Header :toggle="1" :toggle1="1" :toggel2="0"></Header>
     <Swiper></Swiper>
     <Panel></Panel>
     <div class="service">

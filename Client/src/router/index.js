@@ -6,7 +6,8 @@ import Shop from '../components/views/shopcar/shopcar.vue';
 import Cete from '../components/views/cete/cete.vue';
 import Discover from '../components/views/discover/discover.vue';
 import Register from '../components/views/register/register.vue';
-import Login from '../components/views/login/login.vue'
+import Login from '../components/views/login/login.vue';
+import Search from '../components/views/search/search.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -44,7 +45,11 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: Register
+    },
+    {
+      path:'/search',
+      name:'/search',
+      component:Search
     }
-
   ]
 })

@@ -56,15 +56,7 @@
     border: 1px solid #cfaf25;
     background: #fef3be;
     border-radius: 4px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
     box-sizing: border-box;
-    background: -webkit-linear-gradient(top, #fff5c0, #fae4a5);
-    background: -moz-linear-gradient(top, #fff5c0, #fae4a5);
-    background: -ms-linear-gradient(top, #fff5c0, #fae4a5);
-    background: linear-gradient(top, #fff5c0, #fae4a5);
 }
 .error_tips {
     color: #d04e00;

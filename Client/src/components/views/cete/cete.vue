@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :toggle="0"></Header>
+    <Header :toggle="0" :toggle1="1" :toggle2="0"></Header>
     <div class="nav_left">
       <ul>
         <li
@@ -49,7 +49,8 @@ export default {
     return {
       array: [],
       onset: 0,
-      active: 0
+      active: 0,
+      toggle1:1
     };
   },
   methods: {

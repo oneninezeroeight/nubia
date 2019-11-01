@@ -1,0 +1,63 @@
+.hot,
+.history {
+  width: 100%;
+  padding: 25px 20px 0 20px;
+  margin-top: 3.2rem;
+}
+
+.title {
+  color: rgb(156, 156, 156);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+
+}
+
+.hot ul,
+.history ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hot li {
+  padding: 0.5rem;
+  background: rgb(244, 244, 244);
+  color: rgb(30, 30, 30);
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.history li {
+  width: 100%;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(120, 120, 120);
+  font-size: 0.95rem;
+}
+
+.clearHistory {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(120, 120, 120);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 1rem;
+  background: inherit;
+  margin-top: 2rem;
+}
+
+.clearHistory img {
+  width: 13.5%;
+  margin-right: 0.2rem;
+}
