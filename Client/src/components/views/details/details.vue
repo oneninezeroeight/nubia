@@ -229,7 +229,7 @@
               style="display: none;">立即预约, 已售罄, 整点抢购</span>
           </div>
         </div>
-        <div class="toTop" style="display: block;">
+        <div class="toTop" :style="{display:Top}" @click="toTop">
           <img alt="" src="//shop-soa-static.nubia.com/images/buy_mobile/toTop.png?v=1572517539">
         </div>
         <!-- 弹窗 -->
@@ -361,7 +361,7 @@
   export default {
     props: {
       select:Number,
-      
+
     },
     data() {
       return {
@@ -371,6 +371,7 @@
         selected:0*1,
         syid:"",
         act:0,
+        Top:"",
         liactive:0,
         NoneorBlock: 'display:none',
         data: {}
@@ -392,15 +393,21 @@
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
         // console.log(scrollTop)
         if (scrollTop) {
-          _this.scrollFlag = true
+          _this.scrollFlag = true;
+          _this.Top="block"
         } else {
           _this.scrollFlag = false
+          _this.Top="none"
         }
         if (scrollTop > 1100) {
           _this.scrollflag = 1
         } else {
           _this.scrollflag = 0
         }
+      },
+      toTop(){
+        document.body.scrollTop=0;
+        document.documentElement.scrollTop=0
       },
       fanhui() {
         this.$router.push("/cete")
