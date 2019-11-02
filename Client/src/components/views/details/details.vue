@@ -361,6 +361,7 @@
   export default {
     props: {
       select:Number,
+      
     },
     data() {
       return {
