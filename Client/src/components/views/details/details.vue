@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="headerNav">
-      <a class="back"  @click="fanhui">
+      <a class="back" @click="fanhui">
         <img alt="" src="https://shop-soa-static.nubia.com/images/buy_mobile/back.png?v=1572517539">
       </a>
       <div class="pullDown">
@@ -31,7 +31,8 @@
     </div>
     <div class="phone">
       <div :class="['header',{'search-w':scrollFlag}]">
-        <div class="left"><a class="home"><span class="iconfont icon-fanhui" @click="fanhui"></span> <span>红魔3S</span></a></div>
+        <div class="left"><a class="home"><span class="iconfont icon-fanhui" @click="fanhui"></span>
+            <span>红魔3S</span></a></div>
         <div class="center"></div>
         <div class="right">
           <ul style="width: 100%; height: 100%;">
@@ -57,11 +58,11 @@
       </div>
       <div style="padding-bottom: 50px;">
         <div style="width: 375px;">
-          <img :src="data.goodData.image_id" alt="" style="width:100%">
+          <img :src="data.image_id" alt="" style="width:100%">
         </div>
         <div class="pdt-desc">
           <div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
-            <div productname="nubia Z17mini" class="pdt-title">{{data.goodData.name}} 8GB+128GB</div> <a class="bds_more"></a>
+            <div productname="nubia Z17mini" class="pdt-title">{{data.name}} 8GB+128GB</div> <a class="bds_more"></a>
           </div>
           <div class="pdt-details"><span
               style="color: rgb(255, 77, 77); font-size: 16px; font-weight: 800;">六期免息|赠向量保护套（限11.1日和11月11日）</span><br>
@@ -93,10 +94,10 @@
                 </span></p>
             </div>
           </div>
-          <div class="seleted">
+          <div class="seleted" @click="changeGood">
             <div class="seletedTitle">已选</div>
             <div class="seletedInfo">
-              {{data.goodData.name}} 8GB+128GB 仅手机×1
+              {{data.name}} 8GB+128GB 仅手机×1
             </div> <img alt="" src="https://shop-soa-static.nubia.com/images/newVersion/right.png?v=15725175393"
               class="open-selet">
           </div>
@@ -220,8 +221,7 @@
             <a id="btn-collect" pid="1309">
               <!----> <img alt="" src="//shop-soa-static.nubia.com/images/newVersion/collect.png?v=1572517539">
               <span>收藏</span></a> <a id="btn-shopCar" href="/cart/show"><img alt=""
-                src="//shop-soa-static.nubia.com/images/newVersion/cart(gray).png?v=1572517539"> <span
-                >购物车</span>
+                src="//shop-soa-static.nubia.com/images/newVersion/cart(gray).png?v=1572517539"> <span>购物车</span>
               <!----></a></div>
           <div class="btn-group-result"><a id="btn-addtocart" sid="1309" class="icon-addshop"><span>加入购物车</span></a>
             <form id="btn-buy" method="POST" action="/order/check"><input type="hidden" name="buy_from" value="1">
@@ -232,6 +232,126 @@
         <div class="toTop" style="display: block;">
           <img alt="" src="//shop-soa-static.nubia.com/images/buy_mobile/toTop.png?v=1572517539">
         </div>
+        <!-- 弹窗 -->
+        <div class="seletedMask" :style="NoneorBlock" @click="changeGood"></div>
+        <div class="seletModal" style="height: 70%; overflow: auto;" :style="NoneorBlock">
+          <div class="seletedHeader" style="position: fixed; top: 96px; left: 0px;">
+            <div class="seletedHeaderMain"><img src="//oss.static.nubia.cn/active/5d6cd1333eb054.png" alt=""
+                class="seletedPhone">
+              <div class="seletedHeaderInfo">
+                <p class="seletedPrice"><span style="color: rgb(255, 94, 94);">
+                    ￥2999.00
+                    <del class="pdt-orig-price" style="color: rgb(153, 153, 153); display: none;">
+                      ￥2999.00
+                    </del></span>
+                  <!---->
+                  <!---->
+                </p>
+                <p class="seletedName">红魔3S 玄铁黑 8GB+128GB</p>
+              </div>
+              <div class="close" @click="changeGood"><img alt="" src="//shop-soa-static.nubia.com/images/buy_mobile/close.png?v=1572517539">
+              </div>
+            </div>
+          </div>
+          <div class="seletedContent">
+            <div id="selectColor" class="pdt-params">
+              <p>颜色</p>
+              <div class="colorWrap color">
+                <div :class="['pdt-cell','productcolor',{'selected':selected==0}]" :select=0 @click="changeselect">
+                  银色风暴
+                </div>
+                <div :class="['pdt-cell','productcolor',{'selected':selected==1}]" :select=1 @click="changeselect">
+                  玄铁黑
+                </div>
+                <div :class="['pdt-cell','productcolor',{'selected':selected==2}]" :select=2 @click="changeselect">
+                  红蓝竞技
+                </div>
+              </div>
+            </div>
+            <div id="selectSpec" class="pdt-params">
+              <p>规格</p>
+              <div class="colorWrap spec">
+                <div class="pdt-cell2 productspec noShock">
+
+                  12GB+256GB
+
+                </div>
+                <div class="pdt-cell2 productspec selected">
+
+                  8GB+128GB
+
+                </div>
+              </div>
+            </div>
+            <div id="package" class="pdt-suit" style="" len="1">
+              <p>套装</p>
+              <ul id="selectPackage" class="suit-list" style="display: block;">
+                <li def="1" class="pdt-suit-li good-content color">
+                  <div style="overflow: hidden;">
+                    <div class="suit-li-1"><span class="pdt-suit-sort"></span></div>
+                    <div class="pdt-suit-div"><span>仅手机</span></div>
+                  </div>
+                  <ul class="groupItem" style="display: none;"></ul>
+                </li>
+              </ul>
+            </div>
+            <div class="pdt-suit pdt-ywb" style="overflow: hidden;">
+              <p>
+                服务（可选）
+                <a href="/warranty.php?a=warrantyDoc"><img alt=""
+                    src="//shop-soa-static.nubia.com/images/buy_mobile/hint.png?v=1572517539" class="question"></a></p>
+              <ul id="selectBao" class="yanbao">
+                <li ysid="1312" paymentextra="[object Object]" :class="['pdt-ywb-div',{'active':act}]" @click="Active">
+                  <p class="pdt-ywb-name">屏碎宝（半年内保修1次）</p>
+                  <p class="pdt-ywb-price">99.00元/年</p>
+                </li>
+                <li ysid="1311" paymentextra="[object Object]" :class="['pdt-ywb-div',{'active':liactive}]" @click="Active">
+                  <p class="pdt-ywb-name">屏碎宝（1年内保修1次）</p>
+                  <p class="pdt-ywb-price">149.00元/年</p>
+                </li>
+              </ul>
+            </div>
+            <div class="pdt-suit pdt-ywb" style="overflow: hidden;">
+              <div hb1="true" style="">
+                <p class="hbtitle">
+                  分期
+                </p>
+                <ul class="hb">
+                  <li class="pdt-ywb-div">
+                    <p class="pdt-ywb-name">￥1022.66×3期</p>
+                    <p class="pdt-ywb-price">含￥68.98手续费</p>
+                  </li>
+                  <li class="pdt-ywb-div">
+                    <p class="pdt-ywb-name">￥499.83×6期</p>
+                    <p class="pdt-ywb-price">含￥0.00手续费</p>
+                  </li>
+                  <li class="pdt-ywb-div">
+                    <p class="pdt-ywb-name">￥268.66×12期</p>
+                    <p class="pdt-ywb-price">含￥224.93手续费</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pdt-suit" style="overflow: hidden;">
+              <p>
+                数量
+              </p>
+              <div class="num">
+                <div class="minus" @click="reduce"><img src="//shop-soa-static.nubia.com/images/buy_mobile/minus.png?v=1572517539">
+                </div>
+                <div class="totle">1</div>
+                <div class="add" @click="add"><img src="//shop-soa-static.nubia.com/images/buy_mobile/add.png?v=1572517539"></div>
+              </div> <span class="buyLimit">(限购2件)</span>
+            </div>
+            <div class="seledBtnGroup" style="display: block;">
+              <div class="btn-group-result"><a id="btn-addtocart" sid="1309" class="icon-addshop">加入购物车</a>
+                <form id="btn-buy" method="POST" action="/order/check"><input type="hidden" name="buy_from" value="1">
+                  <input id="params" type="hidden" name="item_param"> <a class="button active_button">立即购买</a></form>
+                <span style="display: none;">立即预约, 已售罄, 整点抢购</span> <a id="btn-other" class="" url="">立即购买</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -239,11 +359,20 @@
 <script>
   import axios from 'axios'
   export default {
+    props: {
+      select:Number,
+    },
     data() {
       return {
         scrollFlag: false,
-        scrollflag:0,
-        data:{}
+        scrollflag: 0,
+        display:0,
+        selected:0*1,
+        syid:"",
+        act:0,
+        liactive:0,
+        NoneorBlock: 'display:none',
+        data: {}
       }
     },
     methods: {
@@ -254,7 +383,7 @@
             goodid: this.$route.params.goodid
           }
         }).then(res => {
-          this.data=res.data
+          this.data = res.data.goodData
         })
       },
       handleScroll() {
@@ -266,531 +395,56 @@
         } else {
           _this.scrollFlag = false
         }
-        if (scrollTop>1100) {
-            _this.scrollflag=1
-        }else{
-            _this.scrollflag=0
+        if (scrollTop > 1100) {
+          _this.scrollflag = 1
+        } else {
+          _this.scrollflag = 0
         }
       },
-      fanhui(){
-          this.$router.push("/cete")
-      }
+      fanhui() {
+        this.$router.push("/cete")
+      },
+      changeGood(){
+
+        this.display=!this.display
+        if (this.display) {
+          this.NoneorBlock='display:block'
+        }else{
+          this.NoneorBlock='display:none'
+        }
+          
+      },
+      changeselect(e){
+        this.selected=e.target.getAttribute('select')*1
+      },
+      Active(e){
+
+          if (e.target.getAttribute('ysid')=="1312") {
+            this.liactive=0
+          this.act=!this.act
+            }else{
+              this.act=0
+              this.liactive=!this.liactive
+            }
+        },
+        add(){
+          document.querySelector(".totle").innerText=2
+        },
+        reduce(){
+           document.querySelector(".totle").innerText=1
+        }
+    },
+    created() {
+      this.getData()
     },
     mounted() {
-      this.getData()
+
       window.addEventListener('scroll', this.handleScroll)
     }
   }
 
 </script>
 
-<style lang="stylus" scoped>
-  ol,
-  ul {
-    list-style: none;
-  }
-
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-li, img, label, input {
-    vertical-align: middle;
-}
-  body,
-  h1,
-  h2,
-  h3,
-  p,
-  dl,
-  dd,
-  ol,
-  ul,
-  th,
-  td,
-  form,
-  fieldset,
-  input,
-  button,
-  textarea {
-    margin: 0;
-    padding: 0;
-  }
-
-  .headerNav {
-    /* display: inline-block; */
-    z-index: 1;
-  }
-
-  .back,
-  .pullDown {
-    width: 3em;
-    height: 3em;
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .back {
-    top: 1.5em;
-    left: 1.5em;
-  }
-
-  .back>img,
-  .pullDown>img {
-    width: 100%;
-  }
-
-  .pullDown {
-    top: 1.5em;
-    right: 1.5em;
-  }
-
-  .NavPopup {
-    display: none;
-    position: absolute;
-    right: 0px;
-    background: rgba(255, 255, 255, 0.8);
-    width: 7.5rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-
-  }
-
-  .NavPopup li {
-    width: 100%;
-    height: 2.9em;
-
-  }
-
-  .NavPopup li a {
-    display: inline-block;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .NavPopup li a img {
-    width: 20% !important;
-    margin-right: 0.8rem;
-    min-width: 0 !important;
-  }
-
-  .NavPopup li a span {
-    display: inline-block;
-    width: 80%;
-    text-align: left;
-    color: rgb(126, 126, 126);
-    font-size: 1.2em;
-  }
-
-  .message img,
-  .collect img {
-    transform: scale(1.2);
-  }
-
-  .header {
-    display: none;
-    position: fixed;
-    top: 0rem;
-    left: 0px;
-    height: 4em !important;
-    background-color: #fff;
-    z-index: 99;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .search-w {
-    background: rgb(255, 255, 255);
-    border: none;
-    display: flex
-  }
-
-  .header .left {
-    margin-left: 1rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header .center {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header .right {
-    margin-right: 1rem;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* width: 20%; */
-    min-width: 3%;
-  }
-
-  .pdt-desc {
-    margin-bottom: 1px;
-    position: relative;
-  }
-
-  .pdt-desc {
-    font-size: 18px;
-    background: #fff;
-    line-height: 1.5;
-    padding: 10px 1rem;
-    text-align: left;
-    margin-top: 1px;
-    margin-bottom: 5px;
-  }
-
-  .pdt-desc .pdt-title {
-    color: rgb(25, 25, 25);
-    font-weight: bold;
-  }
-
-  .bds_more {
-    background-image: url(https://shop-soa-static.nubia.com/images/newVersion/share.png);
-    background-size: contain;
-    color: #333;
-    line-height: 16px;
-    height: 20px;
-    width: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-  }
-
-  .pdt-details {
-    display: inline-block;
-    width: 100%;
-    font-size: 15px !important;
-    margin: 0.4rem 0 0.8rem 0;
-    font-family: "agency fb";
-  }
-
-  .pdt-details * {
-    font-size: 15px !important;
-    font-family: "agency fb";
-  }
-
-  .mui-content .pdt-price {
-    font-size: 1.3rem;
-    display: inline-block;
-    width: 100%;
-    font-family: 'Gotham-Medium';
-  }
-
-  .seletGroup {
-    width: 100%;
-    display: inline-block;
-    background: #fff;
-    margin: 0.3rem 0;
-    padding: 0rem 1rem;
-  }
-
-  .promo-sell {
-    background: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-bottom: 1px solid rgb(238, 238, 238);
-    padding: 1.5rem 0px;
-  }
-
-  .promo-sell .title {
-    width: 15%;
-    font-size: 0.9rem;
-    color: rgb(134, 134, 134);
-  }
-
-  .promo-info {
-    width: 85%;
-    display: inline-block;
-  }
-
-  .promo-info p {
-    width: 100%;
-    margin-bottom: 0.4rem;
-    color: rgb(53, 53, 53);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .wrap-txt {
-    margin-right: 0.75rem;
-    color: rgb(255, 94, 94);
-    padding: 0rem 0.5rem;
-    border-radius: 0.3rem;
-    border: 1px solid rgb(255, 94, 94);
-    background: white;
-    font-size: 0.9rem;
-  }
-
-  .promo-info p span {
-    display: inline-block;
-    width: 75%;
-    font-size: 0.9rem;
-  }
-
-  .seleted {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5rem 0px;
-  }
-
-  .seletedTitle,
-  .addressTitle {
-    width: 15%;
-    font-size: 0.9rem;
-    color: rgb(134, 134, 134);
-  }
-
-  .open-selet,
-  .open-address {
-    width: 5%;
-  }
-
-  .address {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.5rem 0px;
-    background: #fff;
-    border-top: 1px solid rgb(238, 238, 238);
-  }
-
-  .addressInfo {
-    width: 80%;
-    display: inline-block;
-  }
-
-  #cityResult {
-    font-size: 0.9rem;
-    color: rgb(57, 57, 57);
-  }
-
-  .address .status {
-    margin-top: 0.3rem;
-    font-size: 0.85rem;
-    padding-right: 2rem;
-  }
-
-  .address .status .expressprefix {
-    color: rgb(255, 94, 94);
-  }
-
-  .address .status .expresstime {
-    color: rgb(120, 120, 120);
-  }
-
-  .recommend-pdt {
-    background: #fff;
-    line-height: 1.5;
-    padding: 1.7rem 1rem;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 0.3rem;
-  }
-
-  .recommend-pdt-title {
-    font-size: 1rem;
-    color: rgb(25, 25, 25);
-  }
-
-  .slider-div {
-    margin-top: 1rem;
-  }
-
-  .recommend-pdt ul {
-    overflow-x: auto;
-    display: -webkit-box;
-  }
-
-  .recommend-pdt ul li {
-    width: 49%;
-    height: 15rem;
-    margin-right: 5px;
-    text-align: center;
-    background: #F8F8F8;
-    padding: 1rem 1rem 0rem 1rem;
-  }
-
-  .recommend-pdt ul li a {
-    background-color: #fff;
-    display: block;
-  }
-
-  .recommend-pdt ul li .prodectName {
-    font-size: 1rem;
-    color: rgb(50, 50, 50);
-    text-overflow: -o-ellipsis-lastline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    word-break: break-all;
-    text-align: center;
-    margin-top: 0.3rem;
-    font-family: "Gotham-book";
-  }
-
-  .recommend-pdt ul li .prodectPrice {
-    margin-top: 0.5rem;
-    color: rgb(255, 94, 94);
-    font-size: 1rem;
-    text-align: center;
-    font-family: "Gotham-book";
-  }
-
-  .recommend-pdt img {
-    width: 100%;
-    background: rgb(248, 248, 248);
-  }
-
-  .wap_content {
-    padding-bottom: 0px !important;
-    padding-top: 3rem;
-    position: relative;
-    text-align: center;
-  }
-
-  .wap_content_title {
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    background: #fff;
-    color: #000;
-    width: 100%;
-  }
-.wap_content_guding{
-    position: fixed;
-    top: 4em;
-}
-  .wap_content_title>a.active {
-    color: #ff4d4d;
-    border-bottom: 1px solid #ff4d4d;
-  }
-
-  .wap_content_title>a {
-    float: left;
-    width: 50%;
-    height: 100%;
-    font-size: 1rem;
-    color: #000;
-    border-bottom: 1px solid #ccc;
-  }
-
-  #slider_info img {
-    width: 100%;
-  }
-
-  .wap_content img {
-    width: 100%;
-    max-width: 750px;
-  }
-
-  .btn-group {
-      height: 50px;
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
-    background: #fff;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    border-top: 1px solid rgb(230, 230, 230);
-  }
-
-  .btn-group .btn-group-action {
-    width: 44% !important;
-    float: left;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.6rem;
-  }
-
-  #btn-kefu,
-  #btn-collect,
-  #btn-shopCar {
-    width: 30%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgb(156, 156, 156);
-    font-size: 0.7rem;
-    padding-top: 0.4rem;
-    position: relative;
-  }
-
-  .btn-group-action img {
-    width: 45%;
-  }
-
-  .btn-group .btn-group-result {
-    width: 56% !important;
-    float: right;
-    height: 100%;
-  }
-
-  #btn-addtocart {
-    margin-top: 0px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    color: rgb(70, 70, 70);
-    background-color: #F8F8F8;
-    float: left;
-    margin-left: 0;
-    font-size: 0.95rem;
-  }
-
-  #btn-buy {
-    width: 50%;
-    float: left;
-    height: 100%;
-    background: rgb(255, 93, 93);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #btn-buy a {
-    font-size: 0.95rem;
-    line-height: 50px;
-    color: white;
-  }
-
-  .toTop {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    right: 1rem;
-    bottom: 4rem;
-    display: none;
-  }
-
+<style lang="stylus" scoped src='../../../assets/details.css'>
+  
 </style>

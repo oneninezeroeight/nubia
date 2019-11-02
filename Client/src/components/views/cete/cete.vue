@@ -114,7 +114,7 @@ export default {
     }
   },
   mounted() {
-    this.getData();
+        this.getData();
     // 监听scroll事件
     this.$nextTick(function() {
       window.addEventListener("scroll", this.onScroll);
